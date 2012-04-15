@@ -12,10 +12,10 @@ import java.io.*;
 
    @author Alexander Rohr
    @version 0.1 alpha
-*/
+ */
 public class Area {
 
-    /**
+	/**
        Liest die Daten der zu verarbeitenden Szenarien von stdin oder
        aus der angegebenen Datei args[0], verarbeitet diese und gibt
        die Resultate aus.
@@ -35,37 +35,36 @@ public class Area {
 
        @throws java.lang.Exception Laufzeitfehler in einer der
        nachgeordneten Klassen; Fehlerursache siehe .toString()
-       
+
        @since 0.1 
-    */
-    public static void main ( String[] args )
-    throws Exception
-    {
-	if ( args.length > 1 )
-	    throw new IllegalArgumentException ("Too many arguments");
+	 */
+	public static void main( String[] args )
+			throws Exception {
+		if ( args.length > 1 )
+			throw new IllegalArgumentException("Too many arguments");
 
-	Reader in;
-	if ( args.length == 0 )
-	    in = new InputStreamReader ( System.in );
-	else
-	    in = new FileReader ( args[0] );
+		Reader in;
+		if ( args.length == 0 )
+			in = new InputStreamReader( System.in );
+		else
+			in = new FileReader( args[0] );
 
-	ScenarioContainer scenCont = new ScenarioContainer ( in );
+		ScenarioContainer scenCont = new ScenarioContainer( in );
 
-	Enumeration scenEnum = scenCont.scenarios ();
-	int i = 1;
-	loop: while ( scenEnum.hasMoreElements() ) {
-	    System.out.println ( "Scenario #" + ( i++ ) + ":" );
-	    Polygon polygon = null; 
-	    try {
-		polygon = 
-		    new Polygon ( (Scenario) scenEnum.nextElement() );
-	    }
-	    catch ( Exception excep ) {
-		System.out.println ( excep );
-		continue loop;
-	    }
-	    System.out.println ( polygon + "\n" );
+		Enumeration<Scenario> scenEnum = scenCont.scenarios();
+		int i = 1;
+		loop: while ( scenEnum.hasMoreElements() ) {
+			System.out.println( "Scenario #" + ( i++ ) + ":" );
+			Polygon polygon = null; 
+			try {
+				polygon = 
+						new Polygon( scenEnum.nextElement() );
+			}
+			catch ( Exception excep ) {
+				System.out.println ( excep );
+				continue loop;
+			}
+			System.out.println ( polygon + "\n" );
+		}
 	}
-    }
 }
