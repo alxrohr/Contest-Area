@@ -8,6 +8,7 @@ import de.alxrohr.area.Corner;
 import de.alxrohr.area.EdgePoint;
 import de.alxrohr.area.Slice;
 
+@Deprecated
 public class SliceTest3 extends TestCase {
 
 	Corner c1 = new Corner ( 0, 0 );
@@ -32,6 +33,7 @@ public class SliceTest3 extends TestCase {
 	Slice os1 = new Slice ( 5 );
 	int i;
 
+	@Deprecated
 	public SliceTest3 ( String name ) {
 		super(name);
 		c1.updateType ( c6, c2 );
@@ -63,64 +65,77 @@ public class SliceTest3 extends TestCase {
 		os1.add ( c6 );
 	}
 
+	@Deprecated
 	protected void setUp() {
 	}
 
+	@Deprecated
 	public void testGetInnerPointsZero () {
 		i = s0.getInnerPoints();
 		assertEquals ( 0, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsOne () {
 		i = s1.getInnerPoints();
 		assertEquals ( 1, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsTwo () {
 		i = s2.getInnerPoints();
 		assertEquals ( 1, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsThree () {
 		i = s3.getInnerPoints();
 		assertEquals ( 2, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsFour () {
 		i = s4.getInnerPoints();
 		assertEquals ( 2, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsFive () {
 		i = s5.getInnerPoints();
 		assertEquals ( 0, i );
 	}
 
+	@Deprecated
 	public void testGetInnerPointsSix () {
 		i = s6.getInnerPoints();
 		assertEquals ( 0, i );
 	}
 
+	@Deprecated
 	public void testAddThrowsEqualY () {
 		try {
 			s1.add ( c6 );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException excep ) {
+		} 
+		catch ( IllegalArgumentException excep ) {
 			assertEquals ("Points with equal y-coordinates in slice!",
 					excep.getMessage() );
 		}
 	}
 
+	@Deprecated
 	public void testAddThrowsDiffX () {
 		try {
 			s1.add ( c2 );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException excep ) {
+		} 
+		catch ( IllegalArgumentException excep ) {
 			assertEquals ("Points with different x-coordinates in slice!",
 					excep.getMessage() );
 		}
 	}
 
+	@Deprecated
 	public void testEqualsEmpty() {
 		assertTrue( !s6.equals (null) ); 
 		assertEquals( s6, s6 );
@@ -128,6 +143,7 @@ public class SliceTest3 extends TestCase {
 		assertTrue( ! s6.equals ( s1 ) );
 	}
 
+	@Deprecated
 	public void testEqualsThree() {
 		assertTrue( !s1.equals (null) ); 
 		assertEquals( s1, s1 );
@@ -135,6 +151,7 @@ public class SliceTest3 extends TestCase {
 		assertTrue( ! s1.equals ( s6 ) );
 	}
 
+	@Deprecated
 	public static void main(String args[]) {
 		junit.swingui.TestRunner.run ( SliceTest3.class );
 	}

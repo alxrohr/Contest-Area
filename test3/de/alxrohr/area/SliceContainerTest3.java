@@ -10,6 +10,7 @@ import de.alxrohr.area.Move;
 import de.alxrohr.area.Slice;
 import de.alxrohr.area.SliceContainer;
 
+@Deprecated
 public class SliceContainerTest3 extends TestCase {
 
 	Vector vec;
@@ -35,6 +36,7 @@ public class SliceContainerTest3 extends TestCase {
 	Slice s5 = new Slice ( 2 );
 	Slice s6 = new Slice ( 2 );
 
+	@Deprecated
 	public SliceContainerTest3 ( String name ) {
 		super(name);
 		c1.updateType ( c6, c2 );
@@ -72,18 +74,22 @@ public class SliceContainerTest3 extends TestCase {
 		sc = new SliceContainer ( 6, moves );
 	}
 
+	@Deprecated
 	protected void setUp() {
 		moves = vec.elements();
 	}
 
+	@Deprecated
 	public void testGetInnerPoints () {
 		assertEquals( 6, sc.getInnerPoints () );
 	}
 
+	@Deprecated
 	public void testGetGridPointsOnEdge () {
 		assertEquals ( 7, sc.getGridPointsOnEdge () );
 	}
 
+	@Deprecated
 	public void testSlices () {
 		Enumeration slices = sc.slices();
 		assertTrue ( slices.hasMoreElements() );
@@ -101,6 +107,7 @@ public class SliceContainerTest3 extends TestCase {
 		assertTrue ( ! slices.hasMoreElements() );
 	}
 
+	@Deprecated
 	public static void main(String args[]) {
 		junit.swingui.TestRunner.run ( SliceContainerTest3.class );
 	}

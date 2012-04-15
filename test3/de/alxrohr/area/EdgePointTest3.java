@@ -4,6 +4,7 @@ import de.alxrohr.area.Corner;
 import de.alxrohr.area.EdgePoint;
 import junit.framework.*;
 
+@Deprecated
 public class EdgePointTest3 extends TestCase {
 	private EdgePoint f_0_0_EdgePoint   = new EdgePoint(  0,  0 );
 	private EdgePoint f_0_1_EdgePoint   = new EdgePoint(  0,  1 );
@@ -20,69 +21,78 @@ public class EdgePointTest3 extends TestCase {
 	private Corner above = new Corner ( 3, 12 );
 	private Corner below = new Corner ( 3, 2 );
 
+	@Deprecated
 	public EdgePointTest3(String name) {
 		super(name);
 	}
 
+	@Deprecated
 	public void testUpdateTypeDefault () {
 		assertEquals ( EdgePoint.UNKNOWN, point.type );
 	}
 
+	@Deprecated
 	public void testUpdateTypeLeft2Right () {
 		point.updateType ( left, right );
 		assertEquals ( EdgePoint.ENTER, point.type );
 	}
 
+	@Deprecated
 	public void testUpdateTypeRight2Left () {
 		point.updateType ( right, left );
 		assertEquals ( EdgePoint.LEAVE, point.type );
 	}
 
+	@Deprecated
 	public void testUpdateTypeThrows () 
-			throws Exception
-			{
+			throws Exception {
 		try {
 			point.updateType ( left, above );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException excep ) {
+		} 
+		catch ( IllegalArgumentException excep ) {
 			assertEquals ("Illegal constellation of an EdgePoint", 
 					excep.getMessage() );
 		}
-			}
+	}
+	@Deprecated
 
 	public void testUpdateTypeThrowsLeftBelow () 
-			throws Exception
-			{
+			throws Exception {
 		try {
 			point.updateType ( left, below );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException e ) {
+		} 
+		catch ( IllegalArgumentException e ) {
 			return; // Test is successful
 		}
-			}
+	}
 
+	@Deprecated
 	public void testUpdateTypeThrowsAboveRight () 
-			throws Exception
-			{
+			throws Exception {
 		try {
 			point.updateType ( above, right );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException e ) {
+		} 
+		catch ( IllegalArgumentException e ) {
 			return; // Test is successful
 		}
-			}
+	}
 
+	@Deprecated
 	public void testUpdateTypeThrowsAboveLeft () 
-			throws Exception
-			{
+			throws Exception {
 		try {
 			point.updateType ( above, left );
 			fail( "Expected IllegalArgumentException" );
-		} catch ( IllegalArgumentException e ) {
+		} 
+		catch ( IllegalArgumentException e ) {
 			return; // Test is successful
 		}
-			}	
+	}	
 
+	@Deprecated
 	public void testHashCode() {
 		EdgePoint equal = new EdgePoint( 1, -1 );
 		assertEquals( f_1_m1_EdgePoint.hashCode() , equal.hashCode() );
@@ -96,6 +106,7 @@ public class EdgePointTest3 extends TestCase {
 		assertTrue( f_m1_1_EdgePoint.hashCode() != equal.hashCode() );
 	}
 
+	@Deprecated
 	public void testEquals() {
 		assertTrue( !f_0_0_EdgePoint.equals (null) ); 
 		assertTrue( !f_1_m1_EdgePoint.equals (null) ); 
@@ -117,11 +128,13 @@ public class EdgePointTest3 extends TestCase {
 		assertTrue( ! f_0_0_EdgePoint.equals ( e_1_m1_EdgePoint ) );
 	}
 
+	@Deprecated
 	public void testtoString() {
 		assertEquals( "( 0, 0.0 )", f_0_0_EdgePoint.toString() );
 		assertEquals( "( 1, -1.0 )", f_1_m1_EdgePoint.toString() );
 	}
 
+	@Deprecated
 	public static void main(String args[]) {
 		junit.swingui.TestRunner.run(EdgePointTest3.class);
 	}

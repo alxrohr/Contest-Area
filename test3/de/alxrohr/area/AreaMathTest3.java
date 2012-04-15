@@ -3,15 +3,15 @@ package de.alxrohr.area;
 import de.alxrohr.area.AreaMath;
 import junit.framework.*;
 
+@Deprecated
 public class AreaMathTest3 extends TestCase {
 
+	@Deprecated
 	public AreaMathTest3(String name) {
 		super(name);
 	}
 
-	//      protected void setUp() {
-	//      }
-
+	@Deprecated
 	public void testGCD() {
 		int p1 = 641;
 		int p2 = 23;
@@ -48,6 +48,7 @@ public class AreaMathTest3 extends TestCase {
 		assertEquals( 0, AreaMath.gcd( 0, -z2 ) );
 	}
 
+	@Deprecated
 	public void testRound() {
 		assertEquals( "3", AreaMath.round( Math.PI, 0 ) );
 		assertEquals( "3.1", AreaMath.round( Math.PI, 1 ) );
@@ -61,6 +62,7 @@ public class AreaMathTest3 extends TestCase {
 		assertEquals( "-3.1416", AreaMath.round( -1 * Math.PI, 4 ) );
 	}
 
+	@Deprecated
 	public static void main(String args[]) {
 		junit.swingui.TestRunner.run(AreaMathTest3.class);
 	}

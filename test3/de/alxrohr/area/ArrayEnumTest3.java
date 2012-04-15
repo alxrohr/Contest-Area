@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 import de.alxrohr.area.ArrayEnum;
 
+@Deprecated
 public class ArrayEnumTest3 extends TestCase {
 	private Object[] emptyArray = {};
 	private Object[] singleArray = { new Integer (100) };
@@ -16,10 +17,12 @@ public class ArrayEnumTest3 extends TestCase {
 	private ArrayEnum singleEnum;
 	private ArrayEnum fullEnum;
 
+	@Deprecated
 	public ArrayEnumTest3(String name) {
 		super(name);
 	}
 
+	@Deprecated
 	public void testArrayEnumHasMoreElements () {
 		emptyEnum = new ArrayEnum ( emptyArray );
 		singleEnum = new ArrayEnum ( singleArray );
@@ -29,9 +32,9 @@ public class ArrayEnumTest3 extends TestCase {
 		assertTrue( fullEnum.hasMoreElements() );
 	}
 
+	@Deprecated
 	public void testArrayEnumNextElementEmpty () 
-			throws Exception
-			{
+			throws Exception {
 		emptyEnum = new ArrayEnum ( emptyArray );
 		assertTrue( !emptyEnum.hasMoreElements() );
 		try {
@@ -41,11 +44,11 @@ public class ArrayEnumTest3 extends TestCase {
 		catch ( NoSuchElementException excep ) {
 			assertEquals (null, excep.getMessage() );
 		}
-			}
+	}
 
+	@Deprecated
 	public void testArrayEnumNextElementSingle () 
-			throws Exception
-			{
+			throws Exception {
 		singleEnum = new ArrayEnum ( singleArray );
 		assertEquals( singleEnum.nextElement(), new Integer (100) );
 		assertTrue( !singleEnum.hasMoreElements() );
@@ -56,11 +59,11 @@ public class ArrayEnumTest3 extends TestCase {
 		catch ( NoSuchElementException excep ) {
 			assertEquals (null, excep.getMessage() );
 		}
-			}
+	}
 
+	@Deprecated
 	public void testArrayEnumNextElementFull () 
-			throws Exception
-			{
+			throws Exception {
 		fullEnum = new ArrayEnum ( fullArray );
 		assertEquals( fullEnum.nextElement(), new Integer (100) );
 		assertTrue( fullEnum.hasMoreElements() );
@@ -77,8 +80,9 @@ public class ArrayEnumTest3 extends TestCase {
 		catch ( NoSuchElementException excep ) {
 			assertEquals (null, excep.getMessage() );
 		}
-			}
+	}
 
+	@Deprecated
 	public static void main(String args[]) {
 		junit.swingui.TestRunner.run(MoveTest3.class);
 	}
