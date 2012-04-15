@@ -26,7 +26,7 @@ public class Polygon {
     }
 
     /**
-       Gibt die ausgew&auml;hlte Attribute des Polygons als String zur&uuml;ck
+       Gibt die relevanten Attribute des Polygons als String zur&uuml;ck
        
        @since 0.1
     */
