@@ -1,5 +1,6 @@
-package area;
+package de.alxrohr.area;
 
+import de.alxrohr.area.Corner;
 import junit.framework.*;
 
 public class CornerTest extends TestCase {

@@ -1,5 +1,6 @@
-package area;
+package de.alxrohr.area;
 
+import de.alxrohr.area.AreaMath;
 import junit.framework.*;
 
 public class AreaMathTest extends TestCase {

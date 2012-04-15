@@ -1,8 +1,12 @@
-package area;
+package de.alxrohr.area;
 
 import junit.framework.*;
 import java.util.Enumeration;
 import java.util.Vector;
+
+import de.alxrohr.area.Corner;
+import de.alxrohr.area.EdgePoint;
+import de.alxrohr.area.Slice;
 
 public class SliceTest extends TestCase {
     

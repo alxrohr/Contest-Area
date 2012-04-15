@@ -1,7 +1,10 @@
-package area;
+package de.alxrohr.area;
 
 import junit.framework.*;
 import java.io.*;
+
+import de.alxrohr.area.Polygon;
+import de.alxrohr.area.Scenario;
 
 public class PolygonTest extends TestCase {
 

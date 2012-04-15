@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 import java.util.Vector;
 import java.util.Enumeration;

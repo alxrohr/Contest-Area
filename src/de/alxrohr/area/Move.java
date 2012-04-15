@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 /**
    repr&auml;sentiert einen Bewegungsschritt von einem Gitterpunkt zu einem

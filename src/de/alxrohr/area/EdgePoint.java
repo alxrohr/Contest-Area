@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 /**
    repr&auml;sentiert einen Punkt auf dem Rand eines Polygons, welcher eine

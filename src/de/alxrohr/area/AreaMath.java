@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 /**
    Utility-Klasse mit statischen Methoden, die f&uuml;r Berechnungen gebraucht werden

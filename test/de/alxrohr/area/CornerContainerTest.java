@@ -1,8 +1,12 @@
-package area;
+package de.alxrohr.area;
 
 import junit.framework.*;
 import java.util.Enumeration;
 import java.util.Vector;
+
+import de.alxrohr.area.Corner;
+import de.alxrohr.area.CornerContainer;
+import de.alxrohr.area.Move;
 
 public class CornerContainerTest extends TestCase {
 

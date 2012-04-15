@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 /**
  repr&auml;sentiert einen Gitterpunkt auf dem Rand eines Polygons
@@ -51,7 +51,7 @@ public class Corner extends EdgePoint implements Cloneable {
 	/**
 	liefert die y-Koordinate dieser <code>Corner</corner> als Flie&szlig;kommazahl, 
 	auch wenn deren Wert immer ganzzahlig ist
-	 * @see area.EdgePoint#getY()
+	 * @see de.alxrohr.area.EdgePoint#getY()
 	 */
 	public float getY() {
 		return y;
@@ -129,7 +129,7 @@ public class Corner extends EdgePoint implements Cloneable {
 	}
 
 	/**
-	 * @see area.EdgePoint#equals(java.lang.Object)
+	 * @see de.alxrohr.area.EdgePoint#equals(java.lang.Object)
 	 */
 	public boolean equals(final Object anObject) {
 		if (anObject instanceof Corner) {
@@ -141,14 +141,14 @@ public class Corner extends EdgePoint implements Cloneable {
 	}
 
 	/**
-	 * @see area.EdgePoint#toString()
+	 * @see de.alxrohr.area.EdgePoint#toString()
 	 */
 	public String toString() {
 		return "( " + x + ", " + y + " )";
 	}
 
 	/**
-	 * @see area.EdgePoint#hashCode()
+	 * @see de.alxrohr.area.EdgePoint#hashCode()
 	 */
 	public int hashCode() {
 		return (x << 16) + y;

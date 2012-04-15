@@ -1,5 +1,6 @@
-package area;
+package de.alxrohr.area;
 
+import de.alxrohr.area.Move;
 import junit.framework.*;
 
 public class MoveTest extends TestCase {

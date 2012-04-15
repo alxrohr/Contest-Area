@@ -1,4 +1,4 @@
-package area;
+package de.alxrohr.area;
 
 import junit.framework.*;
 

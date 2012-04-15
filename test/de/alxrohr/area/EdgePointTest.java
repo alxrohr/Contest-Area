@@ -1,5 +1,7 @@
-package area;
+package de.alxrohr.area;
 
+import de.alxrohr.area.Corner;
+import de.alxrohr.area.EdgePoint;
 import junit.framework.*;
 
 public class EdgePointTest extends TestCase {

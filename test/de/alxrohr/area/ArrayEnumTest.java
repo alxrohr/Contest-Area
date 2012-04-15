@@ -1,7 +1,9 @@
-package area;
+package de.alxrohr.area;
 
 import junit.framework.*;
 import java.util.NoSuchElementException;
+
+import de.alxrohr.area.ArrayEnum;
 
 public class ArrayEnumTest extends TestCase {
     private Object[] emptyArray = {};
