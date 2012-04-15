@@ -8,7 +8,7 @@ import de.alxrohr.area.Corner;
 import de.alxrohr.area.EdgePoint;
 import de.alxrohr.area.Slice;
 
-public class SliceTest extends TestCase {
+public class SliceTest3 extends TestCase {
     
     Corner c1 = new Corner ( 0, 0 );
     Corner c2 = new Corner ( 4, 1 );
@@ -32,7 +32,7 @@ public class SliceTest extends TestCase {
     Slice os1 = new Slice ( 5 );
     int i;
 
-    public SliceTest ( String name ) {
+    public SliceTest3 ( String name ) {
 	super(name);
 	c1.updateType ( c6, c2 );
 	c2.updateType ( c1, c3 );
@@ -136,7 +136,7 @@ public class SliceTest extends TestCase {
 	}
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run ( SliceTest.class );
+	junit.swingui.TestRunner.run ( SliceTest3.class );
     }
     
 }

@@ -8,7 +8,7 @@ import de.alxrohr.area.Corner;
 import de.alxrohr.area.CornerContainer;
 import de.alxrohr.area.Move;
 
-public class CornerContainerTest extends TestCase {
+public class CornerContainerTest3 extends TestCase {
 
     Vector moveVec;
     Enumeration moves;
@@ -16,7 +16,7 @@ public class CornerContainerTest extends TestCase {
     CornerContainer notClosed;
     CornerContainer cc;
     
-    public CornerContainerTest(String name) {
+    public CornerContainerTest3(String name) {
 	super(name);
     	moveVec = new Vector (10);
 	moveVec.addElement ( new Move (  2,  0 ) );
@@ -150,7 +150,7 @@ public class CornerContainerTest extends TestCase {
     }
     
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(CornerContainerTest.class);
+	junit.swingui.TestRunner.run(CornerContainerTest3.class);
     }
     
 }

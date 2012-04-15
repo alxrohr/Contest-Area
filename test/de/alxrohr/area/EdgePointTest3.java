@@ -4,7 +4,7 @@ import de.alxrohr.area.Corner;
 import de.alxrohr.area.EdgePoint;
 import junit.framework.*;
 
-public class EdgePointTest extends TestCase {
+public class EdgePointTest3 extends TestCase {
     private EdgePoint f_0_0_EdgePoint   = new EdgePoint(  0,  0 );
     private EdgePoint f_0_1_EdgePoint   = new EdgePoint(  0,  1 );
     private EdgePoint f_1_0_EdgePoint   = new EdgePoint(  1,  0 );
@@ -20,7 +20,7 @@ public class EdgePointTest extends TestCase {
     private Corner above = new Corner ( 3, 12 );
     private Corner below = new Corner ( 3, 2 );
     
-    public EdgePointTest(String name) {
+    public EdgePointTest3(String name) {
 	super(name);
     }
 
@@ -123,7 +123,7 @@ public class EdgePointTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(EdgePointTest.class);
+	junit.swingui.TestRunner.run(EdgePointTest3.class);
     }
     
 }

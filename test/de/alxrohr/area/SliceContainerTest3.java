@@ -10,7 +10,7 @@ import de.alxrohr.area.Move;
 import de.alxrohr.area.Slice;
 import de.alxrohr.area.SliceContainer;
 
-public class SliceContainerTest extends TestCase {
+public class SliceContainerTest3 extends TestCase {
 
     Vector vec;
     SliceContainer sc;
@@ -35,7 +35,7 @@ public class SliceContainerTest extends TestCase {
     Slice s5 = new Slice ( 2 );
     Slice s6 = new Slice ( 2 );
 
-    public SliceContainerTest ( String name ) {
+    public SliceContainerTest3 ( String name ) {
 	super(name);
 	c1.updateType ( c6, c2 );
 	c2.updateType ( c1, c3 );
@@ -102,7 +102,7 @@ public class SliceContainerTest extends TestCase {
     }
     
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run ( SliceContainerTest.class );
+	junit.swingui.TestRunner.run ( SliceContainerTest3.class );
     }
     
 }

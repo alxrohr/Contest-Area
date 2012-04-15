@@ -6,11 +6,11 @@ import java.io.*;
 import de.alxrohr.area.Polygon;
 import de.alxrohr.area.Scenario;
 
-public class PolygonTest extends TestCase {
+public class PolygonTest3 extends TestCase {
 
     Polygon poly;
 
-    public PolygonTest(String name) 
+    public PolygonTest3(String name) 
 	throws IOException
     {
 	super(name);
@@ -38,7 +38,7 @@ public class PolygonTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(PolygonTest.class);
+	junit.swingui.TestRunner.run(PolygonTest3.class);
     }
     
 }

@@ -3,11 +3,11 @@ package de.alxrohr.area;
 import de.alxrohr.area.Corner;
 import junit.framework.*;
 
-public class EmptyTest extends TestCase {
+public class EmptyTest3 extends TestCase {
     private Corner anEmpty;
     private Corner otherEmpty;
     
-    public EmptyTest(String name) {
+    public EmptyTest3(String name) {
 	super(name);
     }
     
@@ -41,7 +41,7 @@ public class EmptyTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(EmptyTest.class);
+	junit.swingui.TestRunner.run(EmptyTest3.class);
     }
     
 }

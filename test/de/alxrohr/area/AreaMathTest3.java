@@ -3,9 +3,9 @@ package de.alxrohr.area;
 import de.alxrohr.area.AreaMath;
 import junit.framework.*;
 
-public class AreaMathTest extends TestCase {
+public class AreaMathTest3 extends TestCase {
     
-    public AreaMathTest(String name) {
+    public AreaMathTest3(String name) {
 	super(name);
     }
     
@@ -62,7 +62,7 @@ public class AreaMathTest extends TestCase {
 	}
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(AreaMathTest.class);
+	junit.swingui.TestRunner.run(AreaMathTest3.class);
     }
     
 }

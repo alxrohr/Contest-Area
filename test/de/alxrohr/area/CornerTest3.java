@@ -3,7 +3,7 @@ package de.alxrohr.area;
 import de.alxrohr.area.Corner;
 import junit.framework.*;
 
-public class CornerTest extends TestCase {
+public class CornerTest3 extends TestCase {
     private Corner f_0_0_Corner   = new Corner(  0,  0 );
     private Corner f_0_1_Corner   = new Corner(  0,  1 );
     private Corner f_1_0_Corner   = new Corner(  1,  0 );
@@ -24,7 +24,7 @@ public class CornerTest extends TestCase {
     private Corner  w = new Corner ( 1, 5 );
     private Corner  e = new Corner ( 8, 5 );
     
-    public CornerTest(String name) {
+    public CornerTest3(String name) {
 	super(name);
     }
     
@@ -229,7 +229,7 @@ public class CornerTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(CornerTest.class);
+	junit.swingui.TestRunner.run(CornerTest3.class);
     }
     
 }

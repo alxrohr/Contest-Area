@@ -2,9 +2,9 @@ package de.alxrohr.area;
 
 import junit.framework.*;
 
-public class AreaCalcTest extends TestCase {
+public class AreaCalcTest3 extends TestCase {
 
-    public AreaCalcTest(String name) {
+    public AreaCalcTest3(String name) {
 	super(name);
     }
     
@@ -12,7 +12,7 @@ public class AreaCalcTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(AreaCalcTest.class);
+	junit.swingui.TestRunner.run(AreaCalcTest3.class);
     }
     
 }

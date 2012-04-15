@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 import de.alxrohr.area.ArrayEnum;
 
-public class ArrayEnumTest extends TestCase {
+public class ArrayEnumTest3 extends TestCase {
     private Object[] emptyArray = {};
     private Object[] singleArray = { new Integer (100) };
     private Object[] fullArray = { new Integer (100), 
@@ -16,7 +16,7 @@ public class ArrayEnumTest extends TestCase {
     private ArrayEnum singleEnum;
     private ArrayEnum fullEnum;
 
-    public ArrayEnumTest(String name) {
+    public ArrayEnumTest3(String name) {
 	super(name);
     }
     
@@ -80,7 +80,7 @@ public class ArrayEnumTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(MoveTest.class);
+	junit.swingui.TestRunner.run(MoveTest3.class);
     }
     
 }

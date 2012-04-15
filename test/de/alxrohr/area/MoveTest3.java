@@ -3,7 +3,7 @@ package de.alxrohr.area;
 import de.alxrohr.area.Move;
 import junit.framework.*;
 
-public class MoveTest extends TestCase {
+public class MoveTest3 extends TestCase {
     private Move f_0_1_Move;
     private Move f_1_0_Move;
     private Move f_1_1_Move;
@@ -13,7 +13,7 @@ public class MoveTest extends TestCase {
     private Move f_1_m1_Move;
     private Move f_m1_1_Move;
     
-    public MoveTest(String name) {
+    public MoveTest3(String name) {
 	super(name);
     }
     
@@ -77,7 +77,7 @@ public class MoveTest extends TestCase {
     }
 
     public static void main(String args[]) {
-	junit.swingui.TestRunner.run(MoveTest.class);
+	junit.swingui.TestRunner.run(MoveTest3.class);
     }
     
 }
