@@ -16,6 +16,7 @@ public class AreaTestSuite3 extends TestCase {
 		suite.addTestSuite(PolygonTest3.class);
 		suite.addTestSuite(CornerTest3.class);
 		suite.addTestSuite(EdgePointTest3.class);
+		suite.addTestSuite(EmptyTest3.class);
 		suite.addTestSuite(CornerContainerTest3.class);
 		suite.addTestSuite(SliceTest3.class);
 		suite.addTestSuite(SliceContainerTest3.class);
