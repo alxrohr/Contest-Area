@@ -45,8 +45,8 @@ public class ScenarioContainer {
 
        @since 0.1
      */
-    public Enumeration scenarios () {
-	return new ArrayEnum ( scenArray );
+    public Enumeration<Scenario> scenarios() {
+	return new ArrayEnum<Scenario>( scenArray );
     }
 
     /**
@@ -55,7 +55,7 @@ public class ScenarioContainer {
        @since 0.1
      */
     public String toString() {
-	Enumeration scenarios = scenarios();
+	Enumeration<Scenario> scenarios = scenarios();
 	StringBuffer buffer = 
 	    new StringBuffer ();
 	int i = 0;

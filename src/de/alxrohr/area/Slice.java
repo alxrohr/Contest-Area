@@ -86,7 +86,7 @@ public class Slice {
        <code>EdgePoint</code>s contained in <code>this</code>.
        
        @since 0.1 */
-    public Enumeration points () {
+    public Enumeration<EdgePoint> points () {
 	return pointVector.elements();
     }
 
@@ -94,8 +94,8 @@ public class Slice {
 	if ( ! ( anObject instanceof Slice ) )
 	    return false;
 	Slice oSlice = (Slice) anObject;
-	Enumeration points = points();
-	Enumeration other = oSlice.points();
+	Enumeration<EdgePoint> points = points();
+	Enumeration<EdgePoint> other = oSlice.points();
 	while ( points.hasMoreElements () ) {
 	    if ( ! other.hasMoreElements () ) 
 		return false;

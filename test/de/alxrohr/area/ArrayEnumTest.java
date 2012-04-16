@@ -15,22 +15,22 @@ import java.util.NoSuchElementException;
  *
  */
 public class ArrayEnumTest {
-	private static Object[] emptyArray = {};
-	private static Object[] singleArray = { new Integer (100) };
-	private static Object[] fullArray = { 
+	private static Integer[] emptyArray = {};
+	private static Integer[] singleArray = { new Integer (100) };
+	private static Integer[] fullArray = { 
 		new Integer (100), 
 		new Integer (101),
 		new Integer (102), 
 		new Integer (103) };
-	private static ArrayEnum emptyEnum;
-	private static ArrayEnum singleEnum;
-	private static ArrayEnum fullEnum;
+	private static ArrayEnum<Integer> emptyEnum;
+	private static ArrayEnum<Integer> singleEnum;
+	private static ArrayEnum<Integer> fullEnum;
 
 	@BeforeClass
 	public static void runOnceBeforeClass() {
-		emptyEnum = new ArrayEnum ( emptyArray );
-		singleEnum = new ArrayEnum ( singleArray );
-		fullEnum = new ArrayEnum ( fullArray );
+		emptyEnum = new ArrayEnum<Integer> ( emptyArray );
+		singleEnum = new ArrayEnum<Integer> ( singleArray );
+		fullEnum = new ArrayEnum<Integer> ( fullArray );
 	}
 
 	@Test

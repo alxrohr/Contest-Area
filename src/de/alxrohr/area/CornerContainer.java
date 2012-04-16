@@ -39,7 +39,7 @@ public class CornerContainer {
 	
 	@since 0.1 */
     public CornerContainer ( final int size, 
-			     Enumeration moves ) 
+			     Enumeration<Move> moves ) 
 	throws IllegalArgumentException
     {
 	if ( ! moves.hasMoreElements() )
@@ -104,8 +104,8 @@ public class CornerContainer {
 	<code>Corners</code> in <code>this</code>.
 	
 	@since 0.1 */
-    public Enumeration corners () {
-	return new ArrayEnum ( cornerArray );
+    public Enumeration<Corner> corners () {
+	return new ArrayEnum<Corner> ( cornerArray );
     }
 
     /** 
@@ -113,7 +113,7 @@ public class CornerContainer {
 	
 	@since 0.1 */
     public String toString () {
-	Enumeration corners = corners();
+	Enumeration<?> corners = corners();
 	StringBuffer buffer = 
 	    new StringBuffer ();
 	while ( corners.hasMoreElements() ) {
@@ -136,7 +136,7 @@ public class CornerContainer {
     private void updateCornerType () {
 	Corner prev = getLastCorner();
 	Corner follow = getLastCorner();
-	Enumeration corners = corners();
+	Enumeration<?> corners = corners();
 	Corner actual = (Corner) corners.nextElement();
 	    
 	while ( corners.hasMoreElements() ) {

@@ -54,8 +54,8 @@ public class Scenario {
 
        @since 0.1
      */
-    public Enumeration moves() {
-	return new ArrayEnum ( moveArray );
+    public Enumeration<Move> moves() {
+	return new ArrayEnum<Move> ( moveArray );
     }
 
     /**
@@ -73,7 +73,7 @@ public class Scenario {
        @since 0.1
      */
     public String toString() {
-	Enumeration moves = moves();
+	Enumeration<Move> moves = moves();
 	StringBuffer buffer = 
 	    new StringBuffer ();
 	int i = 0;

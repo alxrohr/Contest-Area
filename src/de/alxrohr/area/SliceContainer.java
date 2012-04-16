@@ -22,7 +22,7 @@ public class SliceContainer {
 	@param size number of moves
        
        @since 0.1 */
-    public SliceContainer ( int size, Enumeration moves ) {
+    public SliceContainer ( int size, Enumeration<Move> moves ) {
 	cornerCont = new CornerContainer ( size, moves);
 	int from = cornerCont.minCorner.getX();
 	int to   = cornerCont.maxCorner.getX();
@@ -32,7 +32,7 @@ public class SliceContainer {
 	    - cornerCont.minCorner.getIntY();
 	sliceArray = new Slice [ to - from + 1 ];
 
-	Enumeration corners = cornerCont.corners();
+	Enumeration<Corner> corners = cornerCont.corners();
 	Corner startCorner = (Corner) corners.nextElement();
 	Corner fromCorner = startCorner;
 	Corner toCorner;
@@ -49,10 +49,10 @@ public class SliceContainer {
        
        @since 0.1 */
     public int getInnerPoints () {
-	Enumeration slices = slices();
+	Enumeration<Slice> slices = slices();
 	int result = 0;
 	while ( slices.hasMoreElements() ) {
-	    Slice slice = (Slice) slices.nextElement();
+	    Slice slice = slices.nextElement();
 	    result += slice.getInnerPoints();
 	}
 	return result;
@@ -62,8 +62,8 @@ public class SliceContainer {
        contained in <code>this</code>.
        
        @since 0.1 */
-    public Enumeration slices () {
-	return new ArrayEnum ( sliceArray );
+    public Enumeration<Slice> slices () {
+	return new ArrayEnum<Slice> ( sliceArray );
     }
 
     /** Returns the number of grid points on the edge of the polygon
@@ -101,7 +101,7 @@ public class SliceContainer {
     public static void main ( String[] args ) {
 	java.util.Vector<Move> vec;
 	SliceContainer sc;
-	Enumeration moves;
+	Enumeration<Move> moves;
 	vec = new java.util.Vector<Move> (10);
 	vec.addElement ( new Move (  4,  1 ) );
 	vec.addElement ( new Move (  1,  3 ) );

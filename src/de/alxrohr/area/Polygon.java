@@ -21,7 +21,7 @@ public class Polygon {
        @since 0.1
     */
     public Polygon ( final Scenario scen ) {
-	Enumeration moves = scen.moves();
+	Enumeration<Move> moves = scen.moves();
 	sliceCont = new SliceContainer ( scen.getNumMoves(), moves );
     }
 
@@ -44,7 +44,7 @@ public class Polygon {
 
     private int countGridPointsInside () {
 	int innerPoints = 0;
-	Enumeration slices = sliceCont.slices();
+	Enumeration<Slice> slices = sliceCont.slices();
 
 	while ( slices.hasMoreElements() ) {
 	    Slice slice = (Slice) slices.nextElement();

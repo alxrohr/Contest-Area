@@ -16,15 +16,15 @@ import org.junit.Test;
  *
  */
 public class CornerContainerTest {
-	Vector moveVec;
-	Enumeration moves;
+	Vector<Move> moveVec;
+	Enumeration<Move> moves;
 	CornerContainer empty;
 	CornerContainer notClosed;
 	CornerContainer cc;
 
 	@Before
 	public void runBeforeEveryTest() {
-		moveVec = new Vector(10);
+		moveVec = new Vector<Move>(10);
 		moveVec.addElement( new Move (  2,  0 ) );
 		moveVec.addElement( new Move (  0,  2 ) );
 		moveVec.addElement( new Move ( -1,  0 ) );
@@ -38,7 +38,7 @@ public class CornerContainerTest {
 	@Test
 	public void testCornerContainerThrowsEmpty ()
 			throws Exception {
-		moveVec = new Vector(1);
+		moveVec = new Vector<Move>(1);
 		moves = moveVec.elements();
 		try {
 			@SuppressWarnings("unused")
@@ -66,7 +66,7 @@ public class CornerContainerTest {
 	@Test
 	public void testCornerContainerThrowsSizeOne ()
 			throws Exception {
-		moveVec = new Vector (10);
+		moveVec = new Vector<Move>(10);
 		moveVec.addElement ( new Move (  2,  0 ) );
 		moves = moveVec.elements();
 		try {
@@ -81,7 +81,7 @@ public class CornerContainerTest {
 
 	@Test
 	public void testCornerContainerThrowsSizeTwo () {
-		moveVec = new Vector (10);
+		moveVec = new Vector<Move>(10);
 		moveVec.addElement ( new Move (  2,  0 ) );
 		moveVec.addElement ( new Move (  -2,  0 ) );
 		moves = moveVec.elements();
@@ -117,6 +117,7 @@ public class CornerContainerTest {
 	public void testCornerContainerThrowsNotClosed () {
 		moves.nextElement();
 		try {
+			@SuppressWarnings("unused")
 			CornerContainer cc = new CornerContainer(4, moves);
 			fail( "Expected IllegalArgumentException" );
 		} catch ( IllegalArgumentException excep ) {
@@ -145,7 +146,7 @@ public class CornerContainerTest {
 
 	@Test
 	public void testCorners () {
-		Enumeration corners = cc.corners();
+		Enumeration<Corner> corners = cc.corners();
 		assertTrue ( corners.hasMoreElements() );
 		assertEquals ( new Corner ( 0, 0, Corner.LEAVE ), 
 				(Corner) corners.nextElement() );

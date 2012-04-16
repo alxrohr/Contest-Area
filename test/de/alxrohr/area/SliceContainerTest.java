@@ -17,9 +17,9 @@ import org.junit.Test;
  *
  */
 public class SliceContainerTest {
-	static Vector vec;
+	static Vector<Move> vec;
 	static SliceContainer sc;
-	static Enumeration moves;
+	static Enumeration<Move> moves;
 	final static Corner c1 = new Corner ( 0, 0 );
 	final static Corner c2 = new Corner ( 4, 1 );
 	final static Corner c3 = new Corner ( 5, 4 );
@@ -69,7 +69,7 @@ public class SliceContainerTest {
 		s4.add ( e3a );
 		s4.add ( c2 );
 		s5.add ( c3 );
-		vec = new Vector (10);
+		vec = new Vector<Move> (10);
 		vec.addElement ( new Move (  4,  1 ) );
 		vec.addElement ( new Move (  1,  3 ) );
 		vec.addElement ( new Move ( -3, -2 ) );
@@ -97,7 +97,7 @@ public class SliceContainerTest {
 
 	@Test
 	public void testSlices () {
-		Enumeration slices = sc.slices();
+		Enumeration<Slice> slices = sc.slices();
 		assertTrue ( slices.hasMoreElements() );
 		assertEquals ( s0, (Slice) slices.nextElement() );
 		assertTrue ( slices.hasMoreElements() );

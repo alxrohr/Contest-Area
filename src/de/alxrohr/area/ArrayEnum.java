@@ -10,16 +10,16 @@ import java.util.NoSuchElementException;
    @since 0.1
    @version 0.1
  */
-public class ArrayEnum implements Enumeration {
+public class ArrayEnum<Element> implements Enumeration<Element> {
 
-    private Object[] array;
+    private Element[] array;
     private int maxPos = -1;
     private int pos = -1;
 
     /**
      * @param array Array, &uuml;ber das iteriert werden soll
      */
-    public ArrayEnum ( final Object[] array ) {
+    public ArrayEnum ( final Element[] array ) {
 	this.array = array;
 	maxPos = array.length - 1;
     }
@@ -34,7 +34,7 @@ public class ArrayEnum implements Enumeration {
     /**
      * @see java.util.Enumeration#nextElement()
      */
-    public Object nextElement()
+    public Element nextElement()
     throws NoSuchElementException
     {
 	if ( hasMoreElements() )

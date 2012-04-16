@@ -42,6 +42,7 @@ public class MoveTest {
 			throws Exception
 			{
 		try {
+			@SuppressWarnings("unused")
 			Move test = new Move ( 0, 0 );
 			fail( "Expected IllegalArgumentException" );
 		} catch ( IllegalArgumentException e ) {
